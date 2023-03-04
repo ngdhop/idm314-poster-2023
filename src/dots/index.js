@@ -54,6 +54,122 @@ for (let i = 0; i < 9; i += 1) {
   }
 }
 
+// Playing with text
+const text1 = draw.text(
+    function(add){
+      add.tspan("TOÁN HỌC").newLine().fill("black")
+    }
+  )
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT / (Math.PI * 2))
+  .font({
+    family: 'Helvetica',
+    size:   89,
+    anchor: 'middle',
+    weight: 'normal',
+    style:  'normal'
+  })
+;
+
+const text1a = draw.text(
+    function(add){
+      add.tspan("CHO").newLine().fill("black")
+    }
+  )
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT / (Math.PI * 1.6))
+  .font({
+    family: 'Helvetica',
+    size:   48,
+    anchor: 'middle',
+    weight: 'normal',
+    style:  'normal'
+  })
+;
+
+const text2 = draw.text(
+    function(add){
+  add.tspan("MỌI NGƯỜI").newLine().fill("black")
+    }
+  )
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT / (Math.PI * 1.2))
+  .font({
+    family: 'Helvetica',
+    size:   80,
+    anchor: 'middle',
+    weight: 'bold',
+    style:  'normal'
+  })
+;
+
+
+const text3 = draw.text(
+    function(add){
+      add.tspan("Bài giảng đại chúng").newLine().fill("orange")
+      add.tspan("Ngô Trung Hiếu & Nguyễn Quý Hà").newLine().fill("orange")
+    }                  
+  )
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT / (Math.PI * 0.69))
+  .font({
+    family: 'Helvetica',
+    size:   40,
+    anchor: 'middle',
+    weight: 'bold',
+    style:  'normal'
+  })
+;
+
+const text4 = draw.text(
+    function(add){
+      add.tspan("Triển lãm poster").newLine().fill("green")
+      add.tspan("Mathematical Moments").newLine().fill("green")
+    }                  
+  )
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT / (Math.PI * 0.39))
+  .font({
+    family: 'Helvetica',
+    size:   40,
+    anchor: 'middle',
+    weight: 'bold',
+    style:  'normal'
+  })
+;
+
+const text5 = draw.text(
+    function(add){
+      add.tspan("Viện Toán học").newLine().fill("blue")
+    }                  
+  )
+  .attr("x", WIDTH / 1.2)
+  .attr("y", HEIGHT / (Math.PI * 0.34))
+  .font({
+    family: 'Helvetica',
+    size:   33,
+    anchor: 'middle',
+    weight: 'normal',
+    style:  'normal'
+  })
+;
+
+const text6 = draw.text(
+    function(add){
+      add.tspan("26/03/2023").newLine().fill("blue")
+    }                  
+  )
+  .attr("x", WIDTH / 1.2)
+  .attr("y", HEIGHT / (Math.PI * 0.33))
+  .font({
+    family: 'Helvetica',
+    size:   40,
+    anchor: 'middle',
+    weight: 'normal',
+    style:  'normal'
+  })
+;
+
 // Add the download button handler
 document.getElementById('download').addEventListener('click', () => {
   // Extract the SVG data and send it to the browser as a fake file download
