@@ -160,7 +160,7 @@ const text6 = draw.text(
     }                  
   )
   .attr("x", WIDTH / 1.2)
-  .attr("y", HEIGHT / (Math.PI * 0.33))
+  .attr("y", HEIGHT / (Math.PI * 0.326))
   .font({
     family: 'Helvetica',
     size:   40,
