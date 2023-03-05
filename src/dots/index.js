@@ -113,10 +113,10 @@ const text3 = draw.text(
     }                  
   )
   .attr("x", WIDTH / 2)
-  .attr("y", HEIGHT / (Math.PI * 0.64))
+  .attr("y", HEIGHT / (Math.PI * 0.61))
   .font({
     family: 'Helvetica',
-    size:   40,
+    size:   35,
     anchor: 'middle',
     weight: 'bold',
     style:  'normal'
@@ -130,10 +130,10 @@ const text4 = draw.text(
     }                  
   )
   .attr("x", WIDTH / 2)
-  .attr("y", HEIGHT / (Math.PI * 0.39))
+  .attr("y", HEIGHT / (Math.PI * 0.41))
   .font({
     family: 'Helvetica',
-    size:   40,
+    size:   35,
     anchor: 'middle',
     weight: 'bold',
     style:  'normal'
@@ -149,7 +149,7 @@ const text5 = draw.text(
   .attr("y", HEIGHT / (Math.PI * 0.34))
   .font({
     family: 'Helvetica',
-    size:   33,
+    size:   30,
     anchor: 'middle',
     weight: 'normal',
     style:  'normal'
@@ -165,7 +165,7 @@ const text6 = draw.text(
   .attr("y", HEIGHT / (Math.PI * 0.326))
   .font({
     family: 'Helvetica',
-    size:   40,
+    size:   35,
     anchor: 'middle',
     weight: 'normal',
     style:  'normal'
