@@ -113,7 +113,23 @@ const text3 = draw.text(
     }                  
   )
   .attr("x", WIDTH / 2)
-  .attr("y", HEIGHT / (Math.PI * 0.61))
+  .attr("y", HEIGHT / (Math.PI * 0.81))
+  .font({
+    family: 'Helvetica',
+    size:   35,
+    anchor: 'middle',
+    weight: 'bold',
+    style:  'normal'
+  })
+;
+
+const text3a = draw.text(
+    function(add){
+      add.tspan("Hội chợ cho người yêu sách").newLine().fill("#0492C2")
+    }                  
+  )
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT / (Math.PI * 0.54))
   .font({
     family: 'Helvetica',
     size:   35,
@@ -125,7 +141,7 @@ const text3 = draw.text(
 
 const text4 = draw.text(
     function(add){
-      add.tspan("Triển lãm poster").newLine().fill("green")
+      add.tspan("Chung kết cuộc thi Hoàng Tụy").newLine().fill("green")
       add.tspan("Mathematical Moments").newLine().fill("green")
     }                  
   )
