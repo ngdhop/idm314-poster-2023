@@ -43,7 +43,7 @@ let radius = HEIGHT;
 for (let i = 0; i < 9; i += 1) {
   radius = Math.pow(Math.pow(radius, 1/3) * 0.926, 3);
   let size = radius / 5 - (i * 2);
-  let opac = i-7/8-2*Math.floor(i/2-7/16);
+  let opac = (i-7/8-2*Math.floor(i/2-7/16))*1/2;
   for (let j=0; j<24; j+=1) {
     const angle = (j + 0.5 * (i % 2)) * (Math.PI * 2 / 24);
     const x = radius * Math.cos(angle);
@@ -158,11 +158,11 @@ const text4 = draw.text(
 
 const text5 = draw.text(
     function(add){
-      add.tspan("Viện Toán học").newLine().fill("blue")
+      add.tspan("Viện Toán học").newLine().fill("#0492C2")
     }                  
   )
   .attr("x", WIDTH / 1.2)
-  .attr("y", HEIGHT / (Math.PI * 0.34))
+  .attr("y", HEIGHT / (Math.PI * 0.35))
   .font({
     family: 'Helvetica',
     size:   30,
@@ -174,14 +174,15 @@ const text5 = draw.text(
 
 const text6 = draw.text(
     function(add){
-      add.tspan("26/03/2023").newLine().fill("blue")
+      add.tspan("26/03/2023").newLine().fill("#0492C2")
+      add.tspan("Vào cửa tự do").newLine().fill("#0492C2")
     }                  
   )
   .attr("x", WIDTH / 1.2)
-  .attr("y", HEIGHT / (Math.PI * 0.326))
+  .attr("y", HEIGHT / (Math.PI * 0.338))
   .font({
     family: 'Helvetica',
-    size:   35,
+    size:   30,
     anchor: 'middle',
     weight: 'normal',
     style:  'normal'
@@ -199,4 +200,5 @@ ${svgData}
   const blob = new Blob([fullSVG], { type: 'image/svg+xml' });
   saveAs(blob, 'poster-background.svg');
 });
+
 
