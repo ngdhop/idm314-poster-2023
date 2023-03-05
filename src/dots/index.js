@@ -43,6 +43,7 @@ let radius = HEIGHT;
 for (let i = 0; i < 9; i += 1) {
   radius = Math.pow(Math.pow(radius, 1/3) * 0.926, 3);
   let size = radius / 5 - (i * 2);
+  let opac = i-7/8-2*Math.floor(i/2-7/16);
   for (let j=0; j<24; j+=1) {
     const angle = (j + 0.5 * (i % 2)) * (Math.PI * 2 / 24);
     const x = radius * Math.cos(angle);
@@ -50,7 +51,8 @@ for (let i = 0; i < 9; i += 1) {
     circles
       .circle(size)
       .center(WIDTH / 2 + x, HEIGHT / (Math.PI * 2) + y)
-      .attr({ fill: seqColor() });
+      .attr({ fill: seqColor() })
+      .attr({'fill-opacity': opac});
   }
 }
 
@@ -106,12 +108,12 @@ const text2 = draw.text(
 
 const text3 = draw.text(
     function(add){
-      add.tspan("Bài giảng đại chúng").newLine().fill("orange")
-      add.tspan("Ngô Trung Hiếu & Nguyễn Quý Hà").newLine().fill("orange")
+      add.tspan("Bài giảng đại chúng").newLine().fill("purple")
+      add.tspan("Ngô Trung Hiếu & Nguyễn Quý Hà").newLine().fill("purple")
     }                  
   )
   .attr("x", WIDTH / 2)
-  .attr("y", HEIGHT / (Math.PI * 0.69))
+  .attr("y", HEIGHT / (Math.PI * 0.64))
   .font({
     family: 'Helvetica',
     size:   40,
@@ -181,3 +183,4 @@ ${svgData}
   const blob = new Blob([fullSVG], { type: 'image/svg+xml' });
   saveAs(blob, 'poster-background.svg');
 });
+
